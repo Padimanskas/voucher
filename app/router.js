@@ -7,6 +7,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('player-manager');
+  this.route('question-manager');
+  this.route('tv-support');
+  this.route('advertisemend-factory');
+  this.route('voucher-factory');
+  this.route('tenant-manager');
 });
 
 export default Router;
