@@ -42,8 +42,12 @@ export default Ember.Component.extend({
 
   actions: {
     createVoucher(){
-      const count = this.get('count') + 1;
-      this.set('count', count);
+
+/*      const count = this.get('count') + 1;
+
+      this.set('count', count);*/
+
+      this.sendAction('hideVoucherTable');
 
     },
 
