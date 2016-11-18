@@ -7,7 +7,12 @@ export default Ember.Component.extend({
   actions: {
     hideVoucherTable () {
       this.set('newVoucher', true);
+    },
+
+    showVoucherTable () {
+      this.set('newVoucher', false);
     }
+
   }
 
 

@@ -3,11 +3,11 @@
 
 
 {{#if newVoucher}}
-  <h1>nothing here</h1>
+  {{tenant-manager/new-voucher showVoucherTable='showVoucherTable'}}
 {{else}}
   {{tenant-manager/voucher-filter}}
-  {{tenant-manager/select-voucher}}
-  {{tenant-manager/voucher-table createVoucher='hideVoucherTable'}}
+  {{tenant-manager/select-voucher hideVoucherTable='hideVoucherTable'}}
+  {{tenant-manager/voucher-table }}
 {{/if}}
 
 
