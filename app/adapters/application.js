@@ -1,12 +1,12 @@
 import Ember from 'ember';
 import DS from 'ember-data';
 
-const {
+/*const {
   get,
   run: {
     debounce
   }
-} = Ember;
+} = Ember;*/
 
 export default DS.RESTAdapter.extend({
 
@@ -32,7 +32,7 @@ export default DS.RESTAdapter.extend({
 
   },
 
-  query(store, type, query = {}) {
+  query(/*store, type, query = {}*/) {
 
   }
 

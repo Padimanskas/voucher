@@ -1,16 +1,24 @@
-<nav class="navbar">
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="main-navbar">
-            <ul class="nav navbar-nav">
-              {{#link-to 'tenant-manager' tagName="li"}}<a href="">Tenant Manager</a>{{/link-to}}
-              {{#link-to 'player-manager' tagName="li"}}<a href="">Player Manager</a>{{/link-to}}
-              {{#link-to 'question-manager' tagName="li"}}<a href="">Question Manager</a>{{/link-to}}
-              {{#link-to 'tv-support' tagName="li"}}<a href="">TV Support</a>{{/link-to}}
-              {{#link-to 'advertisemend-factory' tagName="li"}}<a href="">Advertisemend Factory</a>{{/link-to}}
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container pull-right col-md-10">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span>
+                <span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+            <ul class="nav navbar-left navbar-nav">
+
+              {{#link-to 'tenant-manager' tagName="li"}}<a href="">Billing Manager</a>{{/link-to}}
+              {{#link-to 'player-manager' tagName="li"}}<a href="">Tenant Manager</a>{{/link-to}}
+              {{#link-to 'question-manager' tagName="li"}}<a href="">Player Manager</a>{{/link-to}}
+
+              {{#link-to 'tv-support' tagName="li"}}<a href="">Question Factory</a>{{/link-to}}
+              {{#link-to 'advertisemend-factory' tagName="li"}}<a href="">Advertisement Factory</a>{{/link-to}}
               {{#link-to 'voucher-factory' tagName="li"}}<a href="">Voucher Factory</a>{{/link-to}}
               {{#link-to 'index' tagName="li"}}<a href="">User Manager</a>{{/link-to}}
-              {{#link-to 'index' tagName="li"}}<a href="">Billing Manager</a>{{/link-to}}
+
             </ul>
         </div>
     </div>
-</nav>
+</div>

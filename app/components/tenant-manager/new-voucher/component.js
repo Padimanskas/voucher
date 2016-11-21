@@ -9,6 +9,7 @@ export default Ember.Component.extend({
     closeNewVoucher () {
       this.sendAction('showVoucherTable');
     }
+
   }
 
 
