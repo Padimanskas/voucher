@@ -12,7 +12,13 @@ export default Ember.Component.extend({
     {item: "Type6", id: 5},
     {item: "Type7", id: 6},
     {item: "Type8", id: 7}
-  ]
+  ],
+
+  actions: {
+    getData(){
+      this.sendAction('getDataFromWebsocket');
+    }
+  }
 
 
 });

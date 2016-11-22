@@ -5,7 +5,7 @@
 {{#if newVoucher}}
   {{tenant-manager/new-voucher showVoucherTable='showVoucherTable' commonProperty = commonProperty}}
 {{else}}
-  {{tenant-manager/voucher-filter commonProperty = commonProperty}}
+  {{tenant-manager/voucher-filter commonProperty = commonProperty getDataFromWebsocket='getDataFromWebsocketv'}}
   {{tenant-manager/select-voucher hideVoucherTable='hideVoucherTable' commonProperty = commonProperty}}
   {{tenant-manager/voucher-table commonProperty = commonProperty}}
 {{/if}}
@@ -16,3 +16,6 @@
 <div>{{count}}</div><button class="btn btn-default pull-right" {{action 'getDataFromWebsocket'}}>getDataFromWebsocket</button>
 
 {{newVoucher}}
+
+{{commonProperty.abserved}}
+

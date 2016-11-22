@@ -15,7 +15,7 @@ export default Ember.Component.extend({
 
   didInsertElement() {
 
-    const socket = this.get('websockets').socketFor('ws://localhost:7000/');
+    const socket = this.get('websockets').socketFor('ws://localhost:8001/');
 
     socket.on('open', this.myOpenHandler, this);
     socket.on('message', this.myMessageHandler, this);
@@ -38,6 +38,10 @@ export default Ember.Component.extend({
 
   myMessageHandler(event) {
     console.log(`Message: ${event.data}`);
+
+    this.set('commonProperty.abserved', event.data);
+
+
   },
 
   myCloseHandler(event) {
@@ -59,7 +63,7 @@ export default Ember.Component.extend({
 
     getDataFromWebsocket(){
       const socket = this.get('socketRef');
-      socket.send('Hello Websocket World');
+      socket.send('{a:100}');
     },
 
 
