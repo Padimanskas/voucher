@@ -1,0 +1,23 @@
+.table-vouchers {
+  width:100%;
+
+  border:1px solid #000000;
+  border-collapse:collapse;
+  padding:5px;
+
+  & th {
+    border:1px solid #000000;
+    padding:5px;
+    background:#aaa;
+    color: #fff;
+    text-align: center;
+  }
+
+  & td {
+    border:1px solid #000000;
+    text-align:center;
+    padding:5px;
+    background-color: #fff;
+  }
+
+}

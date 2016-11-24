@@ -1,0 +1,9 @@
+<div class="row filter-bar" style="margin:0; padding:0; border: 1px solid red; padding:10px; border: 1px solid #ccc; background: white;">
+    <div class="pull-right">
+        <button class="btn btn-primary pull-right" {{action 'getVouchers'}}>Advanced search</button>
+    </div>
+    <div class="col-md-2 pull-right">
+      {{!--{{one-way-input value=a class="form-control" placeholder="Search voucher by name"}}--}}
+      {{input value=voucherName enter="getVouchers" class="form-control"}}
+    </div>
+</div>

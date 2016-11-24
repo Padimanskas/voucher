@@ -4,6 +4,6 @@ export default Ember.Route.extend({
 
   redirect() {
     this._super.apply(this, arguments);
-    this.transitionTo('tenant-manager');
+    this.transitionTo('voucher-factory');
   }
 });

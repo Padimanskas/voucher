@@ -1,0 +1,32 @@
+
+
+{{voucher-factory/left-sidebar}}
+
+<div class="col-md-10 main-panel">
+
+
+<div class="row"><h1>Voucher Studio</h1></div>
+
+{{#if newVoucher}}
+  {{voucher-factory/new-voucher showVoucherTable='showVoucherTable' commonProperty = commonProperty}}
+{{else}}
+
+    {{voucher-factory/new-voucher-panel hideVoucherTable='hideVoucherTable'}}
+    {{voucher-factory/voucher-filter commonProperty = commonProperty getDataFromWebsocket='getDataFromWebsocket'}}
+    {{voucher-factory/vouchers-table commonProperty = commonProperty getDataFromWebsocket='getDataFromWebsocket'}}
+
+{{!--  {{voucher-factory/voucher-filter commonProperty = commonProperty getDataFromWebsocket='getDataFromWebsocketv'}}
+  {{voucher-factory/select-voucher hideVoucherTable='hideVoucherTable' commonProperty = commonProperty}}
+  {{voucher-factory/voucher-table commonProperty = commonProperty}} --}}
+{{/if}}
+
+
+<button {{action 'changeCommonProp'}}>changeCommonProp</button>
+
+<!--<div>{{count}}</div><button class="btn btn-default pull-right" {{action 'getDataFromWebsocket'}}>getDataFromWebsocket</button>-->
+
+{{newVoucher}}
+
+{{commonProperty.abserved}}
+
+</div>

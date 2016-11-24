@@ -1,7 +1,63 @@
-body {
-  padding-top: 20px;
+#custom-bootstrap-menu.navbar-default {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background-color: rgba(248, 248, 248, 1);
+  border-width: 1px;
+  border-radius: 4px;
+
+  .navbar-nav {
+
+      &> li {
+        border-right: 1px solid #ccc;
+
+        &:first-child {
+          border-left: 1px solid #ccc;
+        }
+
+      }
+
+    &> li > a {
+
+    color: rgba(102, 102, 102, 1);
+    background-color: rgba(248, 248, 248, 0);
+
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 1);
+      background-color: rgba(106, 204, 203, 1);
+    }
+
+  }
+
+    >.active>a {
+      &:hover,
+      &:focus {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(106, 204, 203, 1);
+      }
+    }
+
 }
 
+  .navbar-toggle {
+    border-color: #6acccb;
+
+    &:hover,
+    &:focus {
+      background-color: #6acccb;
+    }
+
+    .icon-bar {
+      background-color: #6acccb;
+    }
+
+    &:hover .icon-bar,
+    &:focus .icon-bar {
+      background-color: #f8f8f8;
+    }
+
+  }
 
 
-
+}

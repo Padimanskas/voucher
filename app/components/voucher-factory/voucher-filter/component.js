@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   currentValue: '',
+  voucherName: '',
 
   items: [
     {item: "Type1", id: 1},
@@ -15,8 +16,8 @@ export default Ember.Component.extend({
   ],
 
   actions: {
-    getData(){
-      this.sendAction('getDataFromWebsocket');
+    getVouchers(){
+      this.sendAction('getDataFromWebsocket', this.get('voucherName'));
     }
   }
 

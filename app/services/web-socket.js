@@ -1,19 +1,11 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
-
-  newVoucher: false,
-
-  commonProperty: {
-    abserved: null
-  },
-
+export default Ember.Service.extend({
 
   websockets: Ember.inject.service(),
 
-  socketRef: null,
-
-  didInsertElement() {
+  init() {
+    this._super(...arguments);
 
     const socket = this.get('websockets').socketFor('ws://localhost:8001/');
 
@@ -38,37 +30,20 @@ export default Ember.Component.extend({
 
   myMessageHandler(event) {
     console.log(`Message: ${event.data}`);
-
-    this.set('commonProperty.abserved', event.data);
-
-
+   // this.set('commonProperty.abserved', event.data);
   },
 
   myCloseHandler(event) {
     console.log(`On close event has been called: ${event}`);
   },
 
-  actions: {
-    hideVoucherTable () {
-      this.set('newVoucher', true);
-    },
+  getAllVouchers(voucherName) {
+    const socket = this.get('socketRef');
+    const readyState = this.get('socketRef').readyState();
 
-    showVoucherTable () {
-      this.set('newVoucher', false);
-    },
-
-    changeCommonProp() {
-      this.set('commonProperty.abserved', '777');
-    },
-
-    getDataFromWebsocket(){
-      const socket = this.get('socketRef');
-      socket.send('{a:100}');
-    },
-
-
+    if(readyState){
+      socket.send('searchVoucher:' + voucherName);
+    }
   }
-
-
 
 });

@@ -1,0 +1,44 @@
+.laft-sidebar {
+  -webkit-box-shadow: 3px 0px 3px 0px rgba(50, 50, 50, 0.11);
+  -moz-box-shadow:    3px 0px 3px 0px rgba(50, 50, 50, 0.11);
+  box-shadow:         3px 0px 3px 0px rgba(50, 50, 50, 0.11);
+  height: 500px;
+  padding: 0;
+
+}
+
+
+.list-group {
+  margin: 0;
+  padding: 0;
+}
+
+.list-group-item {
+
+  padding: 0;
+
+  & > a {
+    background-color: #6acccb;
+    display: block;
+    padding:10px;
+
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+
+    letter-spacing: 0;
+
+    &:hover{
+      background-color: #4ca6a5;
+    }
+  }
+
+  &:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  &:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
