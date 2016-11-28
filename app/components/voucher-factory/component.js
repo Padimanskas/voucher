@@ -1,5 +1,14 @@
 import Ember from 'ember';
 
+const {
+  $,
+  on,
+  get,
+  set,
+  computed,
+  observer,
+} = Ember;
+
 export default Ember.Component.extend({
 
   newVoucher: false,
@@ -7,6 +16,8 @@ export default Ember.Component.extend({
   commonProperty: {
     abserved: null
   },
+
+  some: 'ddddddddd',
 
 
   webSocket: Ember.inject.service(),
@@ -25,12 +36,14 @@ export default Ember.Component.extend({
     },
 
     getDataFromWebsocket(voucherName){
-      const socket = this.get('webSocket');
+/*      const socket = this.get('webSocket');
 
       console.log(voucherName);
-      socket.getAllVouchers(voucherName);
-    },
+      socket.getAllVouchers(voucherName);*/
 
+      this.set('some', get(this, 'store').findAll('voucher'));
+
+    }
 
   }
 

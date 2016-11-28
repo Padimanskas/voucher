@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Service.extend({
 
   websockets: Ember.inject.service(),
+  wsData: null,
 
   init() {
     this._super(...arguments);
@@ -30,20 +31,29 @@ export default Ember.Service.extend({
 
   myMessageHandler(event) {
     console.log(`Message: ${event.data}`);
-   // this.set('commonProperty.abserved', event.data);
+    this.set('wsData', event.data);
+    //this.set('commonProperty.abserved', event.data);
+    return event.data;
   },
 
   myCloseHandler(event) {
     console.log(`On close event has been called: ${event}`);
   },
 
-  getAllVouchers(voucherName) {
+  getAllVouchers(voucherName, resolve, reject) {
     const socket = this.get('socketRef');
     const readyState = this.get('socketRef').readyState();
+
+
 
     if(readyState){
       socket.send('searchVoucher:' + voucherName);
     }
+
+    return this.get('wsData');
+
+
+
   }
 
 });

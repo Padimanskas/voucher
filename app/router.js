@@ -13,6 +13,8 @@ Router.map(function() {
   this.route('advertisemend-factory');
   this.route('voucher-factory');
   this.route('tenant-manager');
+  this.route('vouchers');
+  this.route('voucher-providers');
 });
 
 export default Router;
